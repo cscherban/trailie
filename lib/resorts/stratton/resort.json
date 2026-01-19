@@ -2,7 +2,7 @@
   "name": "Stratton",
   "url": {
     "host": "https://www.stratton.com",
-    "pathname": "/the-mountain/conditions-report#mountain-status"
+    "pathname": "/the-mountain/mountain-report"
   },
   "api": {
     "host": "https://mtnpowder.com",

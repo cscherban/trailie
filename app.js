@@ -17,6 +17,7 @@ import dataRoutes from './lib/routes/data.js';
 import routes from './lib/routes/index.js';
 import weather from './lib/weather/index.js';
 import webcams from './lib/webcams.js';
+import stats from './lib/stats/index.js';
 
 const app = connect();
 export default app;
@@ -32,7 +33,7 @@ const cachify = cachifyStatic(root, { format: 'name' });
 
 app.locals = {
   min: '.min',
-  decorateAbout() {},
+  decorateAbout() { },
   siteUrl,
   staticHost,
   serviceWorker: true,
@@ -74,6 +75,7 @@ app.plugins.register('lifts', lifts);
 app.plugins.register('opening', opening);
 app.plugins.register('weather', weather);
 app.plugins.register('webcams', webcams);
+app.plugins.register('stats', stats);
 
 app.data = dataRoutes();
 
